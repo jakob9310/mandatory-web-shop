@@ -7,34 +7,55 @@
 </head>
 <body>
 
-<form id="checkout" name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+<form id="checkout" name="checkoutForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
     First name:<br>
     <input type="text" name="firstName" value="">
     <br>
     Last name:<br>
+    <div id="formInput1">
     <input type="text" name="lastName" value="">
+        <p class="validate">*</p>
+    </div>
     <br>
+    <div id="formInput1">
     Email address:<br>
     <input type="text" name="email" value="">
+    <p class="validate">*</p>
+    </div>
     <br>
     Phone number:<br>
     <input type="text" name="phone" value="">
     <br>
+    <div id="formInput1">
     Street address:<br>
     <input type="text" name="address" value="">
+    <p class="validate">*</p>
+    </div>
     <br>
+    <div id="formInput1">
     Zip code:<br>
     <input type="text" name="zip" value="">
+    <p class="validate">*</p>
+    </div>
     <br>
+    <div id="formInput1">
     City:<br>
     <input type="text" name="city" value="">
+    <p class="validate">*</p>
+    </div>
     <br>
     Comments:<br>
     <textarea name="comment" value=""></textarea>
     <br><br>
     <input type="submit" value="Submit">
 </form>
-
 
 
 <script src="index.js"></script>

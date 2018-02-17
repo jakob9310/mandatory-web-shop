@@ -43,43 +43,43 @@ let product6 = {
 */
 
 let elem = document.createElement("img");
-elem.setAttribute("height", "200");
-elem.setAttribute("width", "200");
+elem.setAttribute("height", "250");
+elem.setAttribute("width", "250");
 elem.setAttribute("alt", "Adidas Original");
 document.getElementById("image1").appendChild(elem);
 
 
 let elem2 = document.createElement("img");
-elem2.setAttribute("height", "200");
-elem2.setAttribute("width", "200");
+elem2.setAttribute("height", "250");
+elem2.setAttribute("width", "250");
 elem2.setAttribute("alt", "Adidas Original");
 document.getElementById("image2").appendChild(elem2);
 
 
 let elem3 = document.createElement("img");
-elem3.setAttribute("height", "200");
-elem3.setAttribute("width", "200");
+elem3.setAttribute("height", "250");
+elem3.setAttribute("width", "250");
 elem3.setAttribute("alt", "Adidas Original");
 document.getElementById("image3").appendChild(elem3);
 elem3.src = 'images/sko3.jpg';
 
 let elem4 = document.createElement("img");
-elem4.setAttribute("height", "200");
-elem4.setAttribute("width", "200");
+elem4.setAttribute("height", "250");
+elem4.setAttribute("width", "250");
 elem4.setAttribute("alt", "Adidas Original");
 document.getElementById("image4").appendChild(elem4);
 elem4.src = 'images/sko4.jpg';
 
 let elem5 = document.createElement("img");
-elem5.setAttribute("height", "200");
-elem5.setAttribute("width", "200");
+elem5.setAttribute("height", "250");
+elem5.setAttribute("width", "250");
 elem5.setAttribute("alt", "Adidas Original");
 document.getElementById("image5").appendChild(elem5);
 elem5.src = 'images/sko5.jpg';
 
 let elem6 = document.createElement("img");
-elem6.setAttribute("height", "200");
-elem6.setAttribute("width", "200");
+elem6.setAttribute("height", "250");
+elem6.setAttribute("width", "250");
 elem6.setAttribute("alt", "Adidas Original");
 document.getElementById("image6").appendChild(elem6);
 elem6.src = 'images/sko6.jpg';
@@ -88,40 +88,40 @@ elem6.src = 'images/sko6.jpg';
 
 let product1 = [
     "Adidas Originals",
-    "Adidas Originals shoes",
     699,
+    "Adidas Originals shoes",
     elem.src = 'images/sko.jpg'
 ];
 
 let product2 = [
     "Vans",
-    "Old School",
     499,
+    "Old School",
     elem2.src = 'images/sko2.jpg'
 ];
 
 let product3 = [
     "Nike Sportswear",
-    "DUALTONE RACER",
-    449
+    449,
+    "DUALTONE RACER"
 ];
 
 let product4 = [
     "Lacoste",
-    "RIBERAC",
-    599
+    599,
+    "RIBERAC"
 ];
 
 let product5 = [
     "Nike Sportswear",
-    "AIR MAX 90",
-    649
+    649,
+    "AIR MAX 90"
 ];
 
 let product6 = [
     "Michael Kors",
-    "ZIA-ENDINE TAYLOR",
-    349
+    349,
+    "ZIA-ENDINE TAYLOR"
 ];
 
 let pName1 = product1[0];
@@ -172,35 +172,37 @@ document.getElementById("name6").innerHTML = pName6;
 document.getElementById("price6").innerHTML = pPrice6 + ":-";
 document.getElementById("description6").innerHTML = pDesc6;
 
+
+
 function validateForm() {
-    var fName = document.forms["myForm"]["firstName"].value;
-    var lName = document.forms["myForm"]["lastName"].value;
-    var email = document.forms["myForm"]["email"].value;
-    var phone = document.forms["myForm"]["phone"].value;
-    var address = document.forms["myForm"]["address"].value;
-    var zip = document.forms["myForm"]["zip"].value;
-    var city = document.forms["myForm"]["city"].value;
-    if (fName == "") {
-        alert("First name must be filled out");
+    var fName = document.forms["checkoutForm"]["firstName"].value;
+    var lName = document.forms["checkoutForm"]["lastName"].value;
+    var email = document.forms["checkoutForm"]["email"].value;
+    var address = document.forms["checkoutForm"]["address"].value;
+    var zip = document.forms["checkoutForm"]["zip"].value;
+    var city = document.forms["checkoutForm"]["city"].value;
+
+    if (fName === "") {
+        alert("First Name must be filled out");
         return false;
     }
-    if (lName == "") {
-        alert("Last name must be filled out");
+    if (lName === "") {
+        alert("Last Name must be filled out");
         return false;
     }
-    if (email == "") {
+    if (email === "") {
         alert("Email must be filled out");
         return false;
     }
-    if (address == "") {
+    if (address === "") {
         alert("Address must be filled out");
         return false;
     }
-    if (zip == "") {
+    if (zip === ""){
         alert("Zip must be filled out");
         return false;
     }
-    if (city == "") {
+    if (city === "") {
         alert("City must be filled out");
         return false;
     }
