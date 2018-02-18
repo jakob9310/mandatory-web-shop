@@ -6,58 +6,39 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="checkout.html">Checkout</a></li>
     </ul>
 </nav>
-
 <form id="checkout" name="checkoutForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
     First name:<br>
-    <input type="text" name="firstName" value="">
+    <input type="text" name="firstName" value="" placeholder="John"><span id="validate1">*</span>
     <br>
     Last name:<br>
-    <div id="formInput1">
-    <input type="text" name="lastName" value="">
-        <p class="validate">*</p>
-    </div>
+    <input type="text" name="lastName" value="" placeholder="Smith"><span id="validate2">*</span>
     <br>
-    <div id="formInput1">
     Email address:<br>
-    <input type="text" name="email" value="">
-    <p class="validate">*</p>
-    </div>
+    <input type="email" name="email" value="" placeholder="test@test.com"><span id="validate3">*</span>
     <br>
     Phone number:<br>
-    <input type="text" name="phone" value="">
+    <input type="number" name="phone" value="" placeholder="0001112233">
     <br>
-    <div id="formInput1">
     Street address:<br>
-    <input type="text" name="address" value="">
-    <p class="validate">*</p>
-    </div>
+    <input type="text" name="address" value="" placeholder="Street Address"><span id="validate4">*</span>
     <br>
-    <div id="formInput1">
     Zip code:<br>
-    <input type="text" name="zip" value="">
-    <p class="validate">*</p>
-    </div>
+    <input type="number" name="zip" value="" placeholder="12345"><span id="validate5">*</span>
     <br>
-    <div id="formInput1">
     City:<br>
-    <input type="text" name="city" value="">
-    <p class="validate">*</p>
-    </div>
+    <input type="text" name="city" value="" placeholder="Testcity"><span id="validate6">*</span>
     <br>
     Comments:<br>
     <textarea name="comment" value=""></textarea>
     <br><br>
     <input type="submit" value="Submit">
 </form>
-
-
 <script src="index.js"></script>
 </body>
 </html>

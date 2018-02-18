@@ -1,91 +1,41 @@
-/* let product1 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-let product2 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-let product3 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-let product4 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-let product5 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-let product6 = {
-    productName:"Sneaker",
-    price:300,
-    description:"An good looking shoe.",
-    eyeColor:"blue"
-};
-
-*/
-
+// Preload Images
 let elem = document.createElement("img");
 elem.setAttribute("height", "250");
 elem.setAttribute("width", "250");
 elem.setAttribute("alt", "Adidas Original");
 document.getElementById("image1").appendChild(elem);
 
-
 let elem2 = document.createElement("img");
 elem2.setAttribute("height", "250");
 elem2.setAttribute("width", "250");
-elem2.setAttribute("alt", "Adidas Original");
+elem2.setAttribute("alt", "Vans");
 document.getElementById("image2").appendChild(elem2);
-
 
 let elem3 = document.createElement("img");
 elem3.setAttribute("height", "250");
 elem3.setAttribute("width", "250");
-elem3.setAttribute("alt", "Adidas Original");
+elem3.setAttribute("alt", "Nike Sportswear");
 document.getElementById("image3").appendChild(elem3);
-elem3.src = 'images/sko3.jpg';
 
 let elem4 = document.createElement("img");
 elem4.setAttribute("height", "250");
 elem4.setAttribute("width", "250");
-elem4.setAttribute("alt", "Adidas Original");
+elem4.setAttribute("alt", "Lacoste");
 document.getElementById("image4").appendChild(elem4);
-elem4.src = 'images/sko4.jpg';
 
 let elem5 = document.createElement("img");
 elem5.setAttribute("height", "250");
 elem5.setAttribute("width", "250");
-elem5.setAttribute("alt", "Adidas Original");
+elem5.setAttribute("alt", "Nike Sportswear");
 document.getElementById("image5").appendChild(elem5);
-elem5.src = 'images/sko5.jpg';
 
 let elem6 = document.createElement("img");
 elem6.setAttribute("height", "250");
 elem6.setAttribute("width", "250");
-elem6.setAttribute("alt", "Adidas Original");
+elem6.setAttribute("alt", "Michael Kors");
 document.getElementById("image6").appendChild(elem6);
-elem6.src = 'images/sko6.jpg';
 
-
-
+// Product Arrays
 let product1 = [
     "Adidas Originals",
     699,
@@ -103,27 +53,32 @@ let product2 = [
 let product3 = [
     "Nike Sportswear",
     449,
-    "DUALTONE RACER"
+    "DUALTONE RACER",
+    elem3.src = 'images/sko3.jpg'
 ];
 
 let product4 = [
     "Lacoste",
     599,
-    "RIBERAC"
+    "RIBERAC",
+    elem4.src = 'images/sko4.jpg'
 ];
 
 let product5 = [
     "Nike Sportswear",
     649,
-    "AIR MAX 90"
+    "AIR MAX 90",
+    elem5.src = 'images/sko5.jpg'
 ];
 
 let product6 = [
     "Michael Kors",
     349,
-    "ZIA-ENDINE TAYLOR"
+    "ZIA-ENDINE TAYLOR",
+    elem6.src = 'images/sko6.jpg'
 ];
 
+// Assign an array object to a variable
 let pName1 = product1[0];
 let pPrice1 = product1[1];
 let pDesc1 = product1[2];
@@ -148,6 +103,7 @@ let pName6 = product6[0];
 let pPrice6 = product6[1];
 let pDesc6 = product6[2];
 
+// Get HTML element and insert variables
 document.getElementById("name1").innerHTML = pName1;
 document.getElementById("price1").innerHTML = pPrice1 + ":-";
 document.getElementById("description1").innerHTML = pDesc1;
@@ -172,8 +128,7 @@ document.getElementById("name6").innerHTML = pName6;
 document.getElementById("price6").innerHTML = pPrice6 + ":-";
 document.getElementById("description6").innerHTML = pDesc6;
 
-
-
+// Validate checkout form
 function validateForm() {
     var fName = document.forms["checkoutForm"]["firstName"].value;
     var lName = document.forms["checkoutForm"]["lastName"].value;
@@ -186,25 +141,56 @@ function validateForm() {
         alert("First Name must be filled out");
         return false;
     }
-    if (lName === "") {
-        alert("Last Name must be filled out");
+    if (fName !== "") {
+        document.getElementById("validate1").innerHTML = "";
+        if (lName === "") {
+            alert("Last Name must be filled out");
+            return false;
+        }
+        if (lName !== "") {
+            document.getElementById("validate2").innerHTML = "";
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (email !== "") {
+                document.getElementById("validate3").innerHTML = "";
+                if (address === "") {
+                    alert("Address must be filled out");
+                    return false;
+                }
+                if (address !== "") {
+                    document.getElementById("validate4").innerHTML = "";
+                    if (zip === ""){
+                        alert("Zip must be filled out");
+                        return false;
+                    }
+                    if (zip !== ""){
+                        document.getElementById("validate5").innerHTML = "";
+                        if (city === "") {
+                            alert("City must be filled out");
+                            return false;
+                        }
+                        if (city !== "") {
+                            document.getElementById("validate6").innerHTML = "";
+                            return true;
+                        }
+                        return false;
+                    }
+                    return false;
+                }
+                return false;
+            }
+            return false;
+        }
         return false;
     }
-    if (email === "") {
-        alert("Email must be filled out");
-        return false;
-    }
-    if (address === "") {
-        alert("Address must be filled out");
-        return false;
-    }
-    if (zip === ""){
-        alert("Zip must be filled out");
-        return false;
-    }
-    if (city === "") {
-        alert("City must be filled out");
-        return false;
-    }
+
+
+
+
+
+
+
 
 }
