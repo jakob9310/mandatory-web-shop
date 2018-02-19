@@ -185,12 +185,4 @@ function validateForm() {
         }
         return false;
     }
-
-
-
-
-
-
-
-
 }
